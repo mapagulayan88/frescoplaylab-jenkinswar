@@ -6,5 +6,11 @@ pipeline {
                 echo 'Building...' 
             }
         }
+         stage('Maven') {
+            steps {
+                echo 'Maven...' 
+                sh "mvn install clean"
+            }
+        }
     }
 }
